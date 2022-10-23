@@ -1,0 +1,58 @@
+<div class="container">
+  <h2>Submissions</h2>
+
+  <div class="header">
+    <div class="filtersWrapper">
+      <app-input
+        class="search"
+        placeholder="Search"
+        [icon]="faMagnifyingGlass"
+      ></app-input>
+      <app-dropdown
+        [options]="fromDropdownOptions"
+        placeholder="Select From"
+        (optionSelect)="selectFrom($event)"
+      ></app-dropdown>
+      <app-dropdown
+        [options]="statusDropdownOptions"
+        placeholder="Select Status"
+        (optionSelect)="selectStatus($event)"
+      ></app-dropdown>
+      <app-input
+        name="selected_date"
+        [placeholder]="nowDate"
+        [icon]="faCalendarDays"
+        [datepicker]="picker"
+        (inputClick)="picker.open()"
+      ></app-input>
+      <mat-datepicker #picker></mat-datepicker>
+    </div>
+
+    <div class="headerRightContainer">
+      <mat-button-toggle-group [(ngModel)]="view" aria-label="View">
+        <mat-button-toggle
+          *ngFor="let value of ['Map', 'List']"
+          [value]="value"
+          [ngClass]="{ viewButton: true, selectedView: value === view }"
+        >
+          {{ value }}
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+
+      <div class="export">
+        <span><fa-icon [icon]="faFileArrowDown"></fa-icon></span>
+        <span>Export</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="cards">
+      <app-submission-card
+        *ngFor="let card of selectedCards"
+        [submission]="card"
+      ></app-submission-card>
+    </div>
+    <app-map class="map"></app-map>
+  </div>
+</div>

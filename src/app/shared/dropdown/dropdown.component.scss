@@ -1,0 +1,44 @@
+.dropdown {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  min-width: 210px;
+  border: 1px solid #b8b9bc;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  .chevronIcon {
+    color: #b8b9bc;
+  }
+
+  .dropdown-menu {
+    border: 1px solid black;
+    height: fit-content;
+    position: absolute;
+    cursor: pointer;
+    width: 209px;
+    border: 1px solid black;
+    top: 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    z-index: 100;
+
+    .dropdown-menu-item {
+      width: 90%;
+      padding: 10px;
+      border-bottom: 1px solid black;
+    }
+  }
+}

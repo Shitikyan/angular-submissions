@@ -1,0 +1,35 @@
+.inputContainer {
+  position: relative;
+  display: flex;
+
+  .input {
+    outline: none;
+    padding: 13px;
+    font-size: 16px;
+    flex-grow: 1;
+  }
+
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  input[type="date"]::-webkit-clear-button {
+    appearance: none;
+    -webkit-appearance: none;
+    display: none;
+  }
+
+  .inputWithIcon {
+    padding-left: 45px;
+  }
+  .icon {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: 20px;
+    font-size: 20px;
+    margin: 0;
+    color: #b8b9bc;
+  }
+}

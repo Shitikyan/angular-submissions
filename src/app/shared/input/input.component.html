@@ -1,0 +1,14 @@
+<div class="inputContainer">
+  <span class="icon">
+    <fa-icon *ngIf="icon" [icon]="icon"></fa-icon>
+  </span>
+  <input
+    [ngClass]="{ input: true, inputWithIcon: icon !== undefined }"
+    [type]="type"
+    [name]="name"
+    (click)="inputClick.emit($event)"
+    (input)="changeValue.emit($event)"
+    [placeholder]="placeholder"
+    [matDatepicker]="datepicker"
+  />
+</div>

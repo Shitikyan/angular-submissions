@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  background-color: #2188d9;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  width: 100%;
+  color: white;
+  font-family: "Roboto";
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .logo {
+    cursor: pointer;
+    user-select: none;
+    font-size: 32px;
+  }
+
+  .menu {
+    display: flex;
+    font-size: 18px;
+    height: 100%;
+
+    img {
+      height: 20px;
+      width: 20px;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 152px;
+      margin-right: 16px;
+      text-align: center;
+      align-content: center;
+      cursor: pointer;
+      user-select: none;
+      img {
+        margin-right: 10px;
+      }
+    }
+    .active-tab {
+      background-color: #1773bb;
+    }
+  }
+
+  .right-box {
+    cursor: pointer;
+    margin-right: 70px;
+    img {
+      margin-right: 20px;
+    }
+  }
+}

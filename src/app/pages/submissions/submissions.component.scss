@@ -1,0 +1,59 @@
+.container {
+  margin-top: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 32px;
+
+    .filtersWrapper {
+      display: flex;
+      column-gap: 40px;
+      .search {
+        width: 280px;
+      }
+    }
+
+    .headerRightContainer {
+      display: flex;
+      column-gap: 25px;
+
+      .viewButton {
+        width: 80px;
+      }
+      .selectedView {
+        background-color: #2188d9;
+        color: white;
+      }
+      .export {
+        color: #2188d9;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        span {
+          margin-right: 8.5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+    .cards {
+      flex: 2;
+    }
+    .map {
+      flex: 5;
+    }
+  }
+}

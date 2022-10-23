@@ -1,0 +1,15 @@
+<div class="dropdown" (outsideClick)="isOpen && toggleDropdown()">
+  <div (click)="toggleDropdown()">
+    <span>{{ selectedOptionValue || placeholder }}</span>
+    <fa-icon class="chevronIcon" [icon]="faChevronDown"></fa-icon>
+  </div>
+  <div *ngIf="isOpen" class="dropdown-menu">
+    <div
+      class="dropdown-menu-item"
+      *ngFor="let option of options"
+      (click)="selectOption(option)"
+    >
+      <span>{{ option.value }}</span>
+    </div>
+  </div>
+</div>
